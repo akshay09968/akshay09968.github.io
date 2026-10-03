@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Akshay Deshpande’s resume: DevOps engineering, cloud infrastructure, CI/CD, Kubernetes, and AI tools.">
+  <title>Resume — Akshay Deshpande</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232349dd'/%3E%3Cpath d='M15 47 29 17h6l14 30h-8l-3-7H25l-3 7zm13-14h7l-3.5-8z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="resume.css">
+  <script src="resume.js" defer></script>
+</head>
+<body>
+  <nav class="resume-nav" aria-label="Resume actions"><a href="./">Back to portfolio</a><div><a class="download-resume" href="assets/akshay-deshpande-resume.pdf" download>Download PDF</a><button type="button" id="print-resume">Print resume</button></div></nav>
+  <main class="resume">
+    <header class="resume-header"><h1>Akshay Deshpande</h1><p class="role">DevOps Engineer</p><p class="contact">Goa, India <span>·</span> <a href="tel:+918088501542">+91 80885 01542</a> <span>·</span> <a href="mailto:akshaydesh360@gmail.com">akshaydesh360@gmail.com</a></p><p class="contact"><a href="https://github.com/akshay09968">github.com/akshay09968</a> <span>·</span> <a href="https://www.linkedin.com/in/akshay-deshpande-3694391a0/">LinkedIn</a></p></header>
+    <section><h2>Summary</h2><p>DevOps Engineer with 3+ years of experience building and operating cloud-native infrastructure on AWS and Azure. Experienced in CI/CD, Kubernetes/EKS, Helm, Docker Swarm, Terraform, observability, and DevSecOps. Global Siemens AI Hackathon winner who mentors engineers and drives reliable, secure delivery.</p></section>
+    <section><h2>Experience</h2>
+      <article><div class="entry-heading"><h3>Siemens <span>— DevOps Engineer</span></h3><span>Nov 2025 – Present</span></div><p class="location">Goa, India</p><ul>
+        <li>Build and maintain Azure Pipelines in YAML for CI/CD across multiple applications, automating build, test, and deployment stages and reducing manual release effort.</li>
+        <li>Author Helm charts and operate AWS EKS clusters, managing workload scaling, resource requests and limits, pod lifecycle, and troubleshooting.</li>
+        <li>Led end-to-end deployment of Timesheet and AI Suite on an on-prem Ubuntu setup using WSL2, from architecture through production rollout.</li>
+        <li>Implemented Docker Swarm and Portainer for resilient multi-container deployments; managed Azure Repos and a self-hosted PostgreSQL database with automated continuous backups.</li>
+        <li>Deployed Grafana, Loki, and Prometheus for centralized metrics, logs, and alerting across on-prem services.</li>
+        <li>Won the global Siemens AI Hackathon with an AI-driven solution; mentor two interns in DevOps, containers, CI/CD, and cloud fundamentals.</li>
+      </ul></article>
+      <article><div class="entry-heading"><h3>Zaggle <span>— Associate DevOps Engineer</span></h3><span>Apr 2023 – Nov 2025</span></div><p class="location">Hyderabad, India</p><ul>
+        <li>Led a Terraform-driven ECS migration across AWS regions for disaster recovery, achieving a zero-downtime transition and automated re-provisioning.</li>
+        <li>Built a production-grade EKS proof of concept with ECR, Auto Scaling Groups, VPC, ALB, GitHub Actions CI, and ArgoCD GitOps delivery.</li>
+        <li>Automated deployment pipelines for 60+ microservices across four business verticals, increasing release velocity by 40%.</li>
+        <li>Developed reusable Terraform modules for multi-region AWS infrastructure, including Hyderabad DR, accelerating provisioning by 40%.</li>
+        <li>Integrated SonarQube into CI, reducing critical vulnerabilities by 25%; embedded security scanning, linting, testing, and approval workflows in Jenkins and GitHub Actions.</li>
+        <li>Enforced least-privilege IAM and DevSecOps baselines; implemented fault-tolerant autoscaling patterns that contributed to 99.99% availability.</li>
+      </ul></article>
+    </section>
+    <section class="second-page"><h2>Selected projects</h2>
+      <article><h3>eksp <span>— Production-Grade EKS Platform</span></h3><ul>
+        <li>Engineered a Terraform-provisioned EKS platform targeting 1M requests/minute sustained (~17k RPS) and 3× spike absorption, expressed as executable k6 smoke, ramp, spike, and soak thresholds mapped to SLOs.</li>
+        <li>Implemented Karpenter with spot-first NodePools, on-demand fallback, consolidation budgets, and a Graviton system pool; added RPS-based HPA via prometheus-adapter.</li>
+        <li>Enforced strict mTLS and authorization policies with Istio ambient mesh. Delivered GitOps through ArgoCD app-of-apps, sync waves, and environment promotion.</li>
+        <li>Built observability with kube-prometheus-stack, RED dashboards, and multi-window burn-rate alerts; shipped <em>costwatch</em>, a Go and React FinOps app tracing hourly AWS spend.</li>
+        <li>Hardened the platform with OIDC-only CI, Pod Identity, restricted Pod Security Standards, default-deny networking, KMS, IMDSv2, and checkov/tflint/gitleaks scans. Documented 18 architecture decisions and added Terraform tests with mock providers.</li>
+      </ul><p class="stack"><strong>Stack:</strong> AWS, Terraform, Karpenter, Istio, ArgoCD, Helm, Prometheus, Grafana, k6, Go, React.</p></article>
+      <article><h3>Lemma <span>— DevOps AI Agents Control Plane</span></h3><ul>
+        <li>Built an AI-native operations platform for provisioning AWS infrastructure and deploying applications through natural-language agents, with FastAPI/SQLAlchemy and Next.js/TypeScript on PostgreSQL and Redis.</li>
+        <li>Implemented queue-driven AWS sub-account bootstrap for isolated workspaces, with moto-mocked unit tests and gated AWS integration tests.</li>
+        <li>Delivered a ZIP-to-live-URL pipeline: FastAPI on Fargate behind a per-workspace shared ALB, images built by CodeBuild in the customer’s account, and lazy provisioning to keep idle accounts near $0/month.</li>
+        <li>Engineered a Claude-powered deploy agent calling deterministic, tested provision/deploy/teardown tools, with human approval before consequential actions.</li>
+      </ul><p class="stack"><strong>Stack:</strong> Python, FastAPI, SQLAlchemy, TypeScript, Next.js, AWS Fargate/ECS, ALB, CodeBuild, PostgreSQL, Redis, Docker, GitHub Actions, Claude.</p></article>
+    </section>
+    <section><h2>Technical skills</h2><dl class="skills">
+      <div><dt>Cloud</dt><dd>AWS: ECS, EKS, EC2, Lambda, RDS, DocumentDB, DynamoDB, S3, CloudFront, VPC, Route 53, MSK, SQS; Microsoft Azure</dd></div>
+      <div><dt>Containers</dt><dd>Docker, Docker Swarm, Kubernetes, EKS, Helm, Portainer</dd></div>
+      <div><dt>CI/CD & IaC</dt><dd>Azure Pipelines, Azure Repos, GitHub Actions, Jenkins, GitLab, ArgoCD, GitOps, Terraform</dd></div>
+      <div><dt>Observability</dt><dd>Grafana, Loki, Prometheus, New Relic, CloudWatch</dd></div>
+      <div><dt>Data & security</dt><dd>PostgreSQL, MySQL, RDS, Redis, SonarQube, Trivy, IAM, DevSecOps</dd></div>
+      <div><dt>Systems</dt><dd>Linux (Ubuntu), WSL2, Bash</dd></div>
+    </dl></section>
+    <section><h2>Education</h2><div class="entry-heading"><h3>Gogte Institute of Technology, India</h3><span>Aug 2019 – May 2023</span></div><p>Bachelor of Engineering in Computer Science and Engineering · <strong>CGPA: 9.51/10</strong></p></section>
+  </main>
+</body>
+</html>
