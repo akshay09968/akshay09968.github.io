@@ -19,9 +19,14 @@ Open http://localhost:3000. Set `PORT` to use a different port. The preview serv
 - `dist/script.js`: page index and clipboard feedback.
 - `dist/resume.html` and `dist/resume.css`: screen and print resume.
 - `dist/assets/akshay-deshpande-resume.pdf`: downloadable version of the resume. Regenerate it after editing the HTML resume.
-- `.openai/hosting.json`: Sites project identity and static output directory.
+- `.github/workflows/pages.yml`: publishes `dist` to GitHub Pages on pushes to `main`.
+- `.openai/hosting.json`: identity of the previous Sites deployment, retained for reference.
 
 The `dist` directory is the authored, deployable source; it is deliberately tracked. There is no generated JavaScript bundle, analytics, tracking, or contact-form service. Email opens the visitor’s mail application. Project detail sections and navigation work without JavaScript.
+
+## Hosting
+
+The primary site uses GitHub Pages at https://akshay09968.github.io. Its repository is `akshay09968/akshay09968.github.io`. The Pages workflow publishes only `dist`; repository configuration and local preview scripts are excluded from the website artifact. To publish an update, push the changes to `main`.
 
 ## Content notes
 
