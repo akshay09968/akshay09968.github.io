@@ -36,6 +36,7 @@
         <p>An AI operations platform that turns natural-language requests into infrastructure and application deployments, with human approval before consequential actions.</p>
         <ul class="project-highlights"><li>Isolated AWS accounts for each workspace, provisioned by a queue-driven worker.</li><li>A ZIP-to-live-URL pipeline using CodeBuild and Fargate.</li><li>Deterministic, tested tools for provisioning, deploying, and teardown.</li></ul>
         <div class="tags" aria-label="Lemma technology stack"><span>Python</span><span>Next.js</span><span>AWS</span><span>Claude</span></div>
+        <p><a href="https://www.lemma.it.com/" target="_blank" rel="noopener noreferrer">Visit Lemma<span class="sr-only"> (opens in a new tab)</span></a></p>
         <details class="project-details"><summary>Inside the build <span class="details-icon" aria-hidden="true"></span></summary><div class="details-body"><p>A FastAPI and SQLAlchemy backend coordinates queue-driven provisioning, backed by PostgreSQL and Redis. The frontend uses Next.js and TypeScript.</p><p>Images build inside the customer’s AWS account. Applications run on Fargate behind a shared ALB per workspace. Resources are provisioned lazily to keep idle infrastructure costs near zero.</p><p>A Claude-powered agent calls deterministic tools; consequential actions require a person’s approval. Provisioning has moto-mocked unit tests and gated integration tests against AWS.</p></div></details>
       </div>
     </article>
