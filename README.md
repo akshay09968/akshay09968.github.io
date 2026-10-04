@@ -22,6 +22,7 @@ Open http://localhost:3000. Set `PORT` to use a different port. The preview serv
 - `dist/assets/akshay-profile.png`: the supplied profile photograph.
 - `dist/styles.css`: responsive visual design.
 - `dist/script.js`: clipboard feedback and copyright year.
+- `dist/theme.js` and `dist/theme.css`: light/dark mode, defaulting to white and remembering the visitor’s explicit choice in local storage.
 - `dist/resume.html` and `dist/resume.css`: screen and print resume.
 - `dist/assets/akshay-deshpande-resume.pdf`: downloadable version of the resume. Regenerate it after editing the HTML resume.
 - `.github/workflows/pages.yml`: publishes `dist` to GitHub Pages on pushes to `main`.
