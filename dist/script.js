@@ -19,30 +19,4 @@ copyButton?.addEventListener('click', async () => {
   }, 5000);
 });
 
-const indexLinks = [...document.querySelectorAll('.page-index a')];
-const sections = indexLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-let scrollQueued = false;
-function updateIndex() {
-  const readingLine = window.innerHeight * 0.3;
-  let current = sections[0];
-  for (const section of sections) {
-    if (section.getBoundingClientRect().top <= readingLine) current = section;
-  }
-  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) current = sections.at(-1);
-  for (const link of indexLinks) {
-    const active = link.hash === `#${current?.id}`;
-    link.classList.toggle('is-active', active);
-    if (active) link.setAttribute('aria-current', 'location');
-    else link.removeAttribute('aria-current');
-  }
-  scrollQueued = false;
-}
-window.addEventListener('scroll', () => {
-  if (!scrollQueued) {
-    scrollQueued = true;
-    requestAnimationFrame(updateIndex);
-  }
-}, { passive: true });
-window.addEventListener('resize', updateIndex);
-updateIndex();
 document.querySelectorAll('[data-year]').forEach(element => { element.textContent = new Date().getFullYear(); });

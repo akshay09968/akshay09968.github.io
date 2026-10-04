@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Explore Lemma, an AI cloud operations platform, and eksp, a Terraform-provisioned EKS platform built by Akshay Deshpande.">
+  <meta property="og:title" content="Selected Work — Akshay Deshpande">
+  <meta property="og:description" content="Explore Lemma, an AI cloud operations platform, and eksp, a Terraform-provisioned EKS platform built by Akshay Deshpande.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akshay09968.github.io/work.html">
+  <link rel="canonical" href="https://akshay09968.github.io/work.html">
+  <title>Selected Work — Akshay Deshpande</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23282828'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-size='34' fill='white'%3Ead%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Akshay Deshpande, home">Akshay Deshpande</a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="./">Home</a>
+      <a href="work.html" aria-current="page">Work</a>
+      <a href="experience.html">Experience</a>
+      <a href="about.html">About</a>
+      <a href="hobbies.html">Hobbies</a>
+    </nav>
+  </header>
+  <main class="reading-column page-main" id="main">
+    <header class="page-intro"><h1>Selected work</h1><p>Independent projects exploring how infrastructure and AI can make building and deploying software simpler.</p></header>
+    <article class="project" id="lemma" aria-labelledby="lemma-title">
+      <div class="project-copy">
+        <span class="small-label">AI &amp; CLOUD OPERATIONS</span><h2 id="lemma-title">Lemma</h2>
+        <p class="project-summary">Making cloud deployment a conversation.</p>
+        <p>An AI operations platform that turns natural-language requests into infrastructure and application deployments, with human approval before consequential actions.</p>
+        <ul class="project-highlights"><li>Isolated AWS accounts for each workspace, provisioned by a queue-driven worker.</li><li>A ZIP-to-live-URL pipeline using CodeBuild and Fargate.</li><li>Deterministic, tested tools for provisioning, deploying, and teardown.</li></ul>
+        <div class="tags" aria-label="Lemma technology stack"><span>Python</span><span>Next.js</span><span>AWS</span><span>Claude</span></div>
+        <details class="project-details"><summary>Inside the build <span class="details-icon" aria-hidden="true"></span></summary><div class="details-body"><p>A FastAPI and SQLAlchemy backend coordinates queue-driven provisioning, backed by PostgreSQL and Redis. The frontend uses Next.js and TypeScript.</p><p>Images build inside the customer’s AWS account. Applications run on Fargate behind a shared ALB per workspace. Resources are provisioned lazily to keep idle infrastructure costs near zero.</p><p>A Claude-powered agent calls deterministic tools; consequential actions require a person’s approval. Provisioning has moto-mocked unit tests and gated integration tests against AWS.</p></div></details>
+      </div>
+    </article>
+    <article class="project" id="eksp" aria-labelledby="eksp-title">
+      <div class="project-copy">
+        <span class="small-label">PLATFORM ENGINEERING</span><h2 id="eksp-title">eksp</h2>
+        <p class="project-summary">Infrastructure with the hard parts considered.</p>
+        <p>A Terraform-provisioned EKS platform with autoscaling, secure service networking, GitOps delivery, and observability built into its foundations.</p>
+        <ul class="project-highlights"><li>Karpenter and request-based autoscaling for cost-efficient capacity.</li><li>Istio ambient mesh with strict mTLS and authorization policies.</li><li>SLO dashboards, burn-rate alerts, and a custom FinOps app.</li></ul>
+        <p>The platform is designed for one million requests per minute sustained, with 3× spike absorption. These design targets are encoded as k6 load thresholds mapped to SLOs.</p>
+        <div class="tags" aria-label="eksp technology stack"><span>Terraform</span><span>Kubernetes</span><span>ArgoCD</span><span>Go</span></div>
+        <details class="project-details"><summary>Inside the build <span class="details-icon" aria-hidden="true"></span></summary><div class="details-body"><p>The k6 suite defines smoke, ramp, spike, and soak thresholds. The throughput figures are design targets rather than measured production traffic.</p><p>Karpenter uses spot-first NodePools with on-demand fallback. ArgoCD handles app-of-apps delivery, sync waves, and environment promotion. Istio enforces strict mTLS, authorization policies, and L7 waypoint policy.</p><p>Security includes OIDC-only CI, EKS Pod Identity, restricted Pod Security Standards, default-deny networking, and KMS-encrypted secrets. Eighteen architecture decision records document the choices. <em>costwatch</em>, a Go and React app, tracks hourly AWS spend using Cost Explorer.</p></div></details>
+      </div>
+    </article>
+    <div class="work-footer"><p>More experiments, tools, and code:</p><a href="https://github.com/akshay09968" target="_blank" rel="noopener noreferrer">Find me on GitHub<span class="sr-only"> (opens in a new tab)</span></a></div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-contact"><a class="email-link" href="mailto:akshaydesh360@gmail.com">akshaydesh360@gmail.com</a><button class="copy-button" type="button" data-copy-email aria-label="Copy email address"><span>Copy email</span></button></div>
+    <p class="copy-status" role="status" aria-live="polite"></p>
+    <div class="footer-bottom"><p>© <span data-year>2026</span> Akshay Deshpande</p><nav aria-label="Social and resume links"><a href="https://github.com/akshay09968" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span></a><a href="https://www.linkedin.com/in/akshay-deshpande-3694391a0/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a><a href="resume.html">Resume</a></nav></div>
+  </footer>
+</body>
+</html>

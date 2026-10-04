@@ -1,6 +1,6 @@
 # Akshay Deshpande — Portfolio
 
-A lightweight, responsive portfolio built with semantic HTML, CSS, and a small amount of JavaScript. No framework or build step is required.
+A lightweight, responsive portfolio with separate Home, Work, Experience, About, and Hobbies pages built with semantic HTML, CSS, and a small amount of JavaScript. No framework or build step is required.
 
 ## Local preview
 
@@ -14,9 +14,14 @@ Open http://localhost:3000. Set `PORT` to use a different port. The preview serv
 
 ## Edit
 
-- `dist/index.html`: portfolio content and project details.
+- `dist/index.html`: portrait and home-page introduction.
+- `dist/work.html`: selected projects and expandable engineering details.
+- `dist/experience.html`: career history.
+- `dist/about.html`: background, education, and technical toolkit.
+- `dist/hobbies.html`: sports, gaming, and nonfiction reading.
+- `dist/assets/akshay-profile.png`: the supplied profile photograph.
 - `dist/styles.css`: responsive visual design.
-- `dist/script.js`: page index and clipboard feedback.
+- `dist/script.js`: clipboard feedback and copyright year.
 - `dist/resume.html` and `dist/resume.css`: screen and print resume.
 - `dist/assets/akshay-deshpande-resume.pdf`: downloadable version of the resume. Regenerate it after editing the HTML resume.
 - `.github/workflows/pages.yml`: publishes `dist` to GitHub Pages on pushes to `main`.
@@ -38,4 +43,6 @@ Career details and metrics come from the supplied resume. The 1M requests/minute
 npm run check
 ```
 
-The site supports keyboard navigation, reduced motion preferences, native expandable project details, responsive layouts, and print styling. Local browser checks cover desktop and mobile layout, in-page navigation, project expansion, clipboard success and failure, and the resume download.
+The design takes visual direction from https://thinkingmachines.ai/: a white background, narrow reading column, serif body text, and understated sans-serif navigation. The supplied portrait leads the home page.
+
+The site supports keyboard navigation, reduced motion preferences, native expandable project details, responsive layouts, and print styling. Local browser checks cover direct access to each page, desktop and mobile layout, inter-page navigation, project expansion, clipboard feedback, and the resume download.
